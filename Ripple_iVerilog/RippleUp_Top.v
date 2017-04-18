@@ -15,7 +15,7 @@
 	Outputs:
 		outBus: The binary representation of the count that will be linked to LEDs on the DE1 board
 
-	Contributors: Titus Berndt, Nesta Isakovic, and Joshua Shackelford
+	Author: Joshua Shackelford
 
 ***********************************************************************************************/
 

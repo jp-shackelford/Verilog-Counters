@@ -15,7 +15,7 @@ Outputs:
 	q: The output of the DFF, which takes the value of D upon every clock edge
 	qBar: the inverse of the q signal
 
-	Contributors: Titus Berndt, Nesta Isakovic, and Joshua Shackelford
+	Author: Joshua Shackelford
 
 ***********************************************************************************************/
 

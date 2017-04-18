@@ -1,3 +1,23 @@
+/***********************************************************************************************
+	EE 371
+	Joshua Smith
+	Section AB
+
+Description:
+	SynchUp.v is a module implementing a synchronous up counter with the Data-Flow
+	style of verilog. It performs a count up from 0 to 15.
+
+Inputs:
+	clk: The clock signal, the rising edge of which triggers the DFF
+	rst: The reset signal, which is asynchronous from the clock
+
+Outputs:
+	outBus: The output of the counter. A 4-bit bus that increments from 0 to 15
+
+Author: Joshua Shackelford
+
+***********************************************************************************************/
+
 module SynchUp (clk, rst, outBus);
 	
 	input clk, rst;

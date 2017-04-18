@@ -14,7 +14,7 @@
 	Outputs:
 		outBus: a 4-bit output that is driven by the counter. Counts from 0 to 15 then resets.
 
-	Contributors: Titus Berndt, Nesta Isakovic, and Joshua Shackelford
+	Author: Joshua Shackelford
 
 ***********************************************************************************************/
 

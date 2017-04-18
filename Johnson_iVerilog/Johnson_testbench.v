@@ -14,8 +14,8 @@
     Outputs:
         None
         
-	Contributors: Titus Berndt, Nesta Isakovic, and Joshua Shackelford
-
+	Author: Joshua Shackelford
+	
 ***********************************************************************************************/
 
 

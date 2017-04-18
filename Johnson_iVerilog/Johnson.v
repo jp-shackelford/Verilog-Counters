@@ -15,7 +15,7 @@
     Outputs:
         outBus: a 4-bit bus that carries the counting signal of this Ring counter
 
-	Contributors: Titus Berndt, Nesta Isakovic, and Joshua Shackelford
+	Author: Joshua Shackelford
 
 ***********************************************************************************************/
 
