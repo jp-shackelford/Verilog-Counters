@@ -1,0 +1,143 @@
+|DE1_SoC
+CLOCK_50 => clk[0].CLK
+CLOCK_50 => clk[1].CLK
+CLOCK_50 => clk[2].CLK
+CLOCK_50 => clk[3].CLK
+CLOCK_50 => clk[4].CLK
+CLOCK_50 => clk[5].CLK
+CLOCK_50 => clk[6].CLK
+CLOCK_50 => clk[7].CLK
+CLOCK_50 => clk[8].CLK
+CLOCK_50 => clk[9].CLK
+CLOCK_50 => clk[10].CLK
+CLOCK_50 => clk[11].CLK
+CLOCK_50 => clk[12].CLK
+CLOCK_50 => clk[13].CLK
+CLOCK_50 => clk[14].CLK
+CLOCK_50 => clk[15].CLK
+CLOCK_50 => clk[16].CLK
+CLOCK_50 => clk[17].CLK
+CLOCK_50 => clk[18].CLK
+CLOCK_50 => clk[19].CLK
+CLOCK_50 => clk[20].CLK
+CLOCK_50 => clk[21].CLK
+CLOCK_50 => clk[22].CLK
+CLOCK_50 => clk[23].CLK
+CLOCK_50 => clk[24].CLK
+CLOCK_50 => clk[25].CLK
+CLOCK_50 => clk[26].CLK
+CLOCK_50 => clk[27].CLK
+CLOCK_50 => clk[28].CLK
+CLOCK_50 => clk[29].CLK
+CLOCK_50 => clk[30].CLK
+CLOCK_50 => clk[31].CLK
+CLOCK_50 => clk[32].CLK
+SW[0] => ~NO_FANOUT~
+SW[1] => ~NO_FANOUT~
+SW[2] => ~NO_FANOUT~
+SW[3] => ~NO_FANOUT~
+SW[4] => ~NO_FANOUT~
+SW[5] => ~NO_FANOUT~
+SW[6] => ~NO_FANOUT~
+SW[7] => ~NO_FANOUT~
+SW[8] => ~NO_FANOUT~
+SW[9] => ~NO_FANOUT~
+KEY[0] => RippleUp:counter.rst
+KEY[1] => ~NO_FANOUT~
+KEY[2] => ~NO_FANOUT~
+KEY[3] => ~NO_FANOUT~
+LEDR[0] <= RippleUp:counter.outBus[0]
+LEDR[1] <= RippleUp:counter.outBus[1]
+LEDR[2] <= RippleUp:counter.outBus[2]
+LEDR[3] <= RippleUp:counter.outBus[3]
+LEDR[4] <= <GND>
+LEDR[5] <= <GND>
+LEDR[6] <= <GND>
+LEDR[7] <= <GND>
+LEDR[8] <= <GND>
+LEDR[9] <= <GND>
+HEX0[0] <= <VCC>
+HEX0[1] <= <VCC>
+HEX0[2] <= <VCC>
+HEX0[3] <= <VCC>
+HEX0[4] <= <VCC>
+HEX0[5] <= <VCC>
+HEX0[6] <= <VCC>
+HEX1[0] <= <VCC>
+HEX1[1] <= <VCC>
+HEX1[2] <= <VCC>
+HEX1[3] <= <VCC>
+HEX1[4] <= <VCC>
+HEX1[5] <= <VCC>
+HEX1[6] <= <VCC>
+HEX2[0] <= <VCC>
+HEX2[1] <= <VCC>
+HEX2[2] <= <VCC>
+HEX2[3] <= <VCC>
+HEX2[4] <= <VCC>
+HEX2[5] <= <VCC>
+HEX2[6] <= <VCC>
+HEX3[0] <= <VCC>
+HEX3[1] <= <VCC>
+HEX3[2] <= <VCC>
+HEX3[3] <= <VCC>
+HEX3[4] <= <VCC>
+HEX3[5] <= <VCC>
+HEX3[6] <= <VCC>
+HEX4[0] <= <VCC>
+HEX4[1] <= <VCC>
+HEX4[2] <= <VCC>
+HEX4[3] <= <VCC>
+HEX4[4] <= <VCC>
+HEX4[5] <= <VCC>
+HEX4[6] <= <VCC>
+HEX5[0] <= <VCC>
+HEX5[1] <= <VCC>
+HEX5[2] <= <VCC>
+HEX5[3] <= <VCC>
+HEX5[4] <= <VCC>
+HEX5[5] <= <VCC>
+HEX5[6] <= <VCC>
+
+
+|DE1_SoC|RippleUp:counter
+clk => clk.IN1
+rst => rst.IN4
+outBus[0] <= DFlipFlop:F1.q
+outBus[1] <= DFlipFlop:F2.q
+outBus[2] <= DFlipFlop:F3.q
+outBus[3] <= DFlipFlop:F4.q
+
+
+|DE1_SoC|RippleUp:counter|DFlipFlop:F1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qBar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+D => q~reg0.DATAIN
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+
+
+|DE1_SoC|RippleUp:counter|DFlipFlop:F2
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qBar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+D => q~reg0.DATAIN
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+
+
+|DE1_SoC|RippleUp:counter|DFlipFlop:F3
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qBar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+D => q~reg0.DATAIN
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+
+
+|DE1_SoC|RippleUp:counter|DFlipFlop:F4
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qBar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+D => q~reg0.DATAIN
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+
+
