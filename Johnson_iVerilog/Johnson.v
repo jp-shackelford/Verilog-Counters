@@ -23,24 +23,21 @@
 
 module Johnson (clk, rst, outBus);
 
-    input clk, rst;
-    output [3:0] outBus;
+	input clk, rst;
+	output [3:0] outBus;
 
-    //Wires between DFFs
-    wire [3:0] link;
-
-    //Set the behavior system regarding the outBus
-    assign link[0] = ~outBus[3];
-    assign link[1] = outBus[0];
-    assign link[2] = outBus[1];
-    assign link[3] = outBus[2];
-
-    //Set all the appropriate DFlipFlops using a generate statement
-    genvar i;
-    generate
-        for(i = 0; i < 4; i = i+1) begin : eachDFF
-            DFlipFlop otherDFF (.q(outBus[i]), .D(link[i]), .clk(clk), .rst(rst));
-        end
-    endgenerate
-
+	//Wires between DFFs
+	wire [3:0] link;
+	
+	always @(posedge clk or negedge rst) begin
+		if(rst == 0)
+			link <= 4'b0000;
+		else begin
+			link[0] <= ~outBus[3];
+			link[1] <= outBus[0];
+			link[2] <= outBus[1];
+			link[3] <= outBus[2];
+		end
+	end
+	assign outBus = link;
 endmodule
